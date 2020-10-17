@@ -6,7 +6,10 @@ const options = {
     zoomControl: false
 }
 
-const map = L.map('mapid', options).setView([-23.1888482, -46.9146867], 15);
+const lat = document.querySelector("span[data-lat]").dataset.lat
+const lng = document.querySelector("span[data-lng]").dataset.lng
+
+const map = L.map('mapid', options).setView([lat, lng], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
     .addTo(map);
@@ -20,7 +23,9 @@ const icon = L.icon({
     popupAnchor: [170, 2]
 })
 
-L.marker([-23.1888482, -46.9146867], { icon })
+
+L
+    .marker([lat, lng], { icon })
     .addTo(map)
 
 

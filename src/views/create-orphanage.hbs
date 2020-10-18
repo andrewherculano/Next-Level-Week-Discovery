@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Orfanato</title>
+    <title>CADASTRO | NLW</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -48,8 +48,8 @@
 
                     <div class="map-container">
                         <div id="mapid"></div>
-                        <input type="hidden" name="lat">
-                        <input type="hidden" name="lng">
+                        <input type="hidden" name="lat" required>
+                        <input type="hidden" name="lng" required>
                         <footer>
                             <a href="#" id="select-point">
                                 Clique no mapa para adicionar a localização
@@ -78,9 +78,11 @@
                         <div class="images-upload" id="images">
 
                             <div class="new-upload">
-                                <input name="images" placeholder="Cole o link da foto aqui" required type="url" <span
-                                    onclick="deleteField(event)"><img src="/images/remove-file.svg"
-                                    alt="Remover"></span>
+                                <input name="images" placeholder="Cole o link da foto aqui" required type="url">
+
+                                <span onclick="deleteField(event)"><img src="/images/remove-file.svg" alt="Remover">
+                                </span>
+
                             </div>
 
                         </div>
